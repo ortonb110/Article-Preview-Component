@@ -1,0 +1,154 @@
+//Colors
+$color_very_dark_greyish-blue: hsl(217, 19%, 35%);
+$color_desaturated_dark-blue: hsl(214, 17%, 51%);
+$color_greyish-blue: hsl(212, 23%, 69%);
+$color_light_greyish-blue: hsl(210, 46%, 95%);
+
+
+//Font-face
+@font-face {
+    font-family: 'Manrope';
+    src: url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1.25;
+    font-size: 1.3rem;
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: $color_light_greyish-blue;
+
+    main {
+
+        border-radius: 10px;
+        background-color: #fff;
+        .image-grid {
+            background-image: url('./images/drawers.jpg');
+           background-size: cover;
+        }
+        .content-grid {
+            padding: 3rem;
+
+            .header-title {
+                color: $color_very_dark_greyish-blue;
+                line-height: 1.5;
+            }
+
+            .content-text {
+                color: $color_desaturated_dark-blue;
+            }
+
+
+            .creator {
+                display: grid;
+                grid-template-columns: 0.35fr 1fr;
+                align-items: center;
+
+                .user-avatar {
+                    width: 5rem;
+                    height: 5rem;
+                    object-fit: cover;
+                    border-radius: 100%;
+                    
+                }
+
+                .user-details {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    .user-name {
+                        margin-bottom: 0;
+                        font-weight: 700;
+                        color: $color_very_dark_greyish-blue;
+                        letter-spacing: 0.08rem;
+                    }
+
+                    .date {
+                        margin-top: 0.6rem;
+                        color: $color_greyish-blue;
+                        letter-spacing: 0.08rem;
+                    }
+
+                    img{
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        object-fit: contain;
+                        padding: 1rem;
+                        cursor: pointer;
+                        border-radius: 100%;
+                        background-color: $color_light_greyish-blue;
+                    }
+                }
+            }
+
+
+        }
+        
+
+    }
+
+
+}
+
+
+
+
+@media screen and(max-width: 899px) {
+    main {
+        width: 330px;
+        
+        
+        .image-grid {
+           border-radius: 10px 10px 0 0;
+           height: 22rem;
+           margin: 0;
+        }
+
+        .content-grid {
+            padding: 2.5rem;
+
+            .header-title {
+                font-size: 1.65rem;
+                
+                
+            }
+
+            .content-text {
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+
+            
+        }
+
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    main {
+        width: 900px;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        
+
+        .image-grid {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

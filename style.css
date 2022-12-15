@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.25;
+  font-size: 1.3rem;
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: hsl(210deg, 46%, 95%);
+}
+body main {
+  border-radius: 10px;
+  background-color: #fff;
+}
+body main .image-grid {
+  background-image: url("./images/drawers.jpg");
+  background-size: cover;
+}
+body main .content-grid {
+  padding: 3rem;
+}
+body main .content-grid .header-title {
+  color: hsl(217deg, 19%, 35%);
+  line-height: 1.5;
+}
+body main .content-grid .content-text {
+  color: hsl(214deg, 17%, 51%);
+}
+body main .content-grid .creator {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  align-items: center;
+}
+body main .content-grid .creator .user-avatar {
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+body main .content-grid .creator .user-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .content-grid .creator .user-details .user-name {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: hsl(217deg, 19%, 35%);
+  letter-spacing: 0.08rem;
+}
+body main .content-grid .creator .user-details .date {
+  margin-top: 0.6rem;
+  color: hsl(212deg, 23%, 69%);
+  letter-spacing: 0.08rem;
+}
+body main .content-grid .creator .user-details img {
+  width: 3.5rem;
+  height: 3.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: hsl(210deg, 46%, 95%);
+}
+
+@media screen and (max-width: 899px) {
+  main {
+    width: 330px;
+  }
+  main .image-grid {
+    border-radius: 10px 10px 0 0;
+    height: 22rem;
+    margin: 0;
+  }
+  main .content-grid {
+    padding: 2.5rem;
+  }
+  main .content-grid .header-title {
+    font-size: 1.65rem;
+  }
+  main .content-grid .content-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 900px) {
+  main {
+    width: 900px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+  }
+  main .image-grid {
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -101,8 +101,8 @@ body main .content-grid .creator footer .user-details .date {
     transition: all 0.3s ease;
   }
   main .content-grid .socials {
-    background-color: hsl(217deg, 19%, 35%);
     display: none;
+    background-color: hsl(217deg, 19%, 35%);
     justify-content: space-around;
     border-radius: 0 0 10px 10px;
     align-items: center;

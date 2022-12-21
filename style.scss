@@ -148,8 +148,8 @@ body {
             }
                
             .socials {
-                    background-color: $color_very_dark_greyish-blue;
                     display: none;
+                    background-color: $color_very_dark_greyish-blue;
                     justify-content: space-around;
                     border-radius: 0 0 10px 10px;
                     // position: absolute;
@@ -222,14 +222,11 @@ body {
 
 
             .creator {
-                
                 footer {
 
                     grid-template-columns: 0.18fr 1fr !important;
                 }
             }
-
-            
         }
     }
 }

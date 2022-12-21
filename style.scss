@@ -35,12 +35,15 @@ body {
 
         border-radius: 10px;
         background-color: #fff;
+        box-shadow: 0px 26px 60px -21px rgba(0,0,0,0.51);
+-webkit-box-shadow: 0px 26px 60px -21px rgba(0,0,0,0.51);
+-moz-box-shadow: 0px 26px 60px -21px rgba(0,0,0,0.51);
         .image-grid {
             background-image: url('./images/drawers.jpg');
            background-size: cover;
         }
         .content-grid {
-            padding: 3rem;
+            
 
             .header-title {
                 color: $color_very_dark_greyish-blue;
@@ -51,46 +54,51 @@ body {
                 color: $color_desaturated_dark-blue;
             }
 
+            .btn-share {
+                width: 3.5rem;
+                height: 3.5rem;
+                object-fit: contain;
+                padding: 1rem;
+                cursor: pointer;
+                border-radius: 100%;
+                background-color: $color_light_greyish-blue;
+            }
+
 
             .creator {
-                display: grid;
-                grid-template-columns: 0.35fr 1fr;
-                align-items: center;
+                footer {
 
-                .user-avatar {
-                    width: 5rem;
-                    height: 5rem;
-                    object-fit: cover;
-                    border-radius: 100%;
-                    
-                }
-
-                .user-details {
-                    display: flex;
-                    justify-content: space-between;
+                    display: grid;
+                    grid-template-columns: 0.35fr 1fr;
                     align-items: center;
-                    
-                    .user-name {
-                        margin-bottom: 0;
-                        font-weight: 700;
-                        color: $color_very_dark_greyish-blue;
-                        letter-spacing: 0.08rem;
-                    }
-
-                    .date {
-                        margin-top: 0.6rem;
-                        color: $color_greyish-blue;
-                        letter-spacing: 0.08rem;
-                    }
-
-                    img{
-                        width: 3.5rem;
-                        height: 3.5rem;
-                        object-fit: contain;
-                        padding: 1rem;
-                        cursor: pointer;
+    
+                    .user-avatar {
+                        width: 5rem;
+                        height: 5rem;
+                        object-fit: cover;
                         border-radius: 100%;
-                        background-color: $color_light_greyish-blue;
+                        
+                    }
+    
+                    .user-details {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        
+                        .user-name {
+                            margin-bottom: 0;
+                            font-weight: 700;
+                            color: $color_very_dark_greyish-blue;
+                            letter-spacing: 0.08rem;
+                        }
+    
+                        .date {
+                            margin-top: 0.6rem;
+                            color: $color_greyish-blue;
+                            letter-spacing: 0.08rem;
+                        }
+    
+                        
                     }
                 }
             }
@@ -119,19 +127,66 @@ body {
         }
 
         .content-grid {
-            padding: 2.5rem;
+            .inner {
+                padding: 2.5rem;
+                .header-title {
+                    font-size: 1.65rem;
+                    
+                    
+                }
+    
+                .content-text {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
 
-            .header-title {
-                font-size: 1.65rem;
-                
-                
+                .creator  {
+                    
+                    transition: all 0.3s ease;
+                    
+                }
             }
+               
+            .socials {
+                    background-color: $color_very_dark_greyish-blue;
+                    display: none;
+                    justify-content: space-around;
+                    border-radius: 0 0 10px 10px;
+                    // position: absolute;
+                    // bottom: 142px;
+                    // width: 88.25%;
+                    // height: 78px;
+                    align-items: center;
+                    padding: 1rem 2rem;
+                    transition: all 0.3s ease;
+                    
+                    .social-wrapper {
+                        display: grid;
+                        grid-template-columns: 0.1fr 2fr;
+                        align-items: center;
+                         .social-title {
+                        color: $color_greyish-blue;
+                        text-transform: uppercase;
+                        letter-spacing: 6px;
+                        
+                        }
 
-            .content-text {
-                font-size: 1.4rem;
-                font-weight: 500;
-            }
+                        .social-media-pages {
+                        list-style-type: none;
+                        display: flex;
+                        
+                        padding-left: 1rem;
 
+                        li {
+                            margin-right: 1.8rem;
+                         }
+                        }
+                    }
+
+                   
+                    
+             }
+            
             
         }
 
@@ -141,14 +196,40 @@ body {
 
 @media screen and (min-width: 900px) {
     main {
-        width: 900px;
+        width: 850px;
         display: grid;
-        grid-template-columns: 0.5fr 1fr;
+        grid-template-columns: 0.6fr 1fr;
         
 
         .image-grid {
             height: 100%;
             object-fit: contain;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .content-grid {
+            padding: 3rem 4rem;
+
+            .header-title {
+                margin-top: 0;
+                font-size: 2.5rem;
+            }
+
+            .content-text {
+                font-size: 1.5rem;
+                line-height: 1.9;
+            }
+
+
+            .creator {
+                
+                footer {
+
+                    grid-template-columns: 0.18fr 1fr !important;
+                }
+            }
+
+            
         }
     }
 }

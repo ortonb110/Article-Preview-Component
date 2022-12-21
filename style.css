@@ -24,13 +24,13 @@ body {
 body main {
   border-radius: 10px;
   background-color: #fff;
+  box-shadow: 0px 26px 60px -21px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 0px 26px 60px -21px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 26px 60px -21px rgba(0, 0, 0, 0.51);
 }
 body main .image-grid {
   background-image: url("./images/drawers.jpg");
   background-size: cover;
-}
-body main .content-grid {
-  padding: 3rem;
 }
 body main .content-grid .header-title {
   color: hsl(217deg, 19%, 35%);
@@ -39,35 +39,7 @@ body main .content-grid .header-title {
 body main .content-grid .content-text {
   color: hsl(214deg, 17%, 51%);
 }
-body main .content-grid .creator {
-  display: grid;
-  grid-template-columns: 0.35fr 1fr;
-  align-items: center;
-}
-body main .content-grid .creator .user-avatar {
-  width: 5rem;
-  height: 5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 100%;
-}
-body main .content-grid .creator .user-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-body main .content-grid .creator .user-details .user-name {
-  margin-bottom: 0;
-  font-weight: 700;
-  color: hsl(217deg, 19%, 35%);
-  letter-spacing: 0.08rem;
-}
-body main .content-grid .creator .user-details .date {
-  margin-top: 0.6rem;
-  color: hsl(212deg, 23%, 69%);
-  letter-spacing: 0.08rem;
-}
-body main .content-grid .creator .user-details img {
+body main .content-grid .btn-share {
   width: 3.5rem;
   height: 3.5rem;
   -o-object-fit: contain;
@@ -76,6 +48,34 @@ body main .content-grid .creator .user-details img {
   cursor: pointer;
   border-radius: 100%;
   background-color: hsl(210deg, 46%, 95%);
+}
+body main .content-grid .creator footer {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  align-items: center;
+}
+body main .content-grid .creator footer .user-avatar {
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+body main .content-grid .creator footer .user-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .content-grid .creator footer .user-details .user-name {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: hsl(217deg, 19%, 35%);
+  letter-spacing: 0.08rem;
+}
+body main .content-grid .creator footer .user-details .date {
+  margin-top: 0.6rem;
+  color: hsl(212deg, 23%, 69%);
+  letter-spacing: 0.08rem;
 }
 
 @media screen and (max-width: 899px) {
@@ -87,26 +87,71 @@ body main .content-grid .creator .user-details img {
     height: 22rem;
     margin: 0;
   }
-  main .content-grid {
+  main .content-grid .inner {
     padding: 2.5rem;
   }
-  main .content-grid .header-title {
+  main .content-grid .inner .header-title {
     font-size: 1.65rem;
   }
-  main .content-grid .content-text {
+  main .content-grid .inner .content-text {
     font-size: 1.4rem;
     font-weight: 500;
+  }
+  main .content-grid .inner .creator {
+    transition: all 0.3s ease;
+  }
+  main .content-grid .socials {
+    background-color: hsl(217deg, 19%, 35%);
+    display: none;
+    justify-content: space-around;
+    border-radius: 0 0 10px 10px;
+    align-items: center;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+  }
+  main .content-grid .socials .social-wrapper {
+    display: grid;
+    grid-template-columns: 0.1fr 2fr;
+    align-items: center;
+  }
+  main .content-grid .socials .social-wrapper .social-title {
+    color: hsl(212deg, 23%, 69%);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+  main .content-grid .socials .social-wrapper .social-media-pages {
+    list-style-type: none;
+    display: flex;
+    padding-left: 1rem;
+  }
+  main .content-grid .socials .social-wrapper .social-media-pages li {
+    margin-right: 1.8rem;
   }
 }
 @media screen and (min-width: 900px) {
   main {
-    width: 900px;
+    width: 850px;
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
   main .image-grid {
     height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
+    border-radius: 10px 0 0 10px;
+  }
+  main .content-grid {
+    padding: 3rem 4rem;
+  }
+  main .content-grid .header-title {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
+  main .content-grid .content-text {
+    font-size: 1.5rem;
+    line-height: 1.9;
+  }
+  main .content-grid .creator footer {
+    grid-template-columns: 0.18fr 1fr !important;
   }
 }/*# sourceMappingURL=style.css.map */
